@@ -13,6 +13,7 @@ Ogni dipartimento e' composto da corsi di laura, formati da corsi, gestiti da in
 
 NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una possibile realta', e nel caso sia una scelta poco chiara, descriverla con poche parole
 
+
 - Dipartimento
 	. nome: VARCHAR(128) ; NOT NULLABLE
 	. indirizzo: VARCHAR ; NOT NULLABLE
@@ -20,12 +21,10 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
 	. telefono: VARCHAR(32) ; NULLABLE
 	. link_sito_web: VARCHAR ; NULLABLE
 
-
 - Corso di Laurea
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . tipologia(triennale/magistrale): VARCHAR(32) ; NULLABLE
     . anno_accademico: YEAR ; NOT NULLABLE
-
 
 - Corso
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
