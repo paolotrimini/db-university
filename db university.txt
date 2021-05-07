@@ -30,11 +30,11 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . periodo: TINYINT(1) ; NOT NULLABLE
     . codice: VARCHAR(16) ; NOT NULLABLE ; UNIQUE
-    . lingua:
-    . crediti:
+    . lingua: VARCHAR(5) ; DEFAULT('it-IT')
+    . crediti: TINYINT(2) ; NOT NULLABLE
     . docente:
     . orario:
-    . link sito web:
+    . link sito web: VARCHAR ; NOT NULLABLE
 
 
 
