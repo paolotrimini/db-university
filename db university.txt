@@ -18,13 +18,13 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
 	. indirizzo: VARCHAR ; NOT NULLABLE
 	. email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
 	. telefono: VARCHAR(32) ; NULLABLE
-	. link sito web: VARCHAR ; NULLABLE
+	. link_sito_web: VARCHAR ; NULLABLE
 
 
 - Corso di Laurea
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . tipologia(triennale/magistrale): VARCHAR(32) ; NULLABLE
-    . anno accademico: YEAR ; NOT NULLABLE
+    . anno_accademico: YEAR ; NOT NULLABLE
 
 - Corso
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
@@ -32,16 +32,26 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . codice: VARCHAR(16) ; NOT NULLABLE ; UNIQUE
     . lingua: VARCHAR(5) ; DEFAULT('it-IT')
     . crediti: TINYINT(2) ; NOT NULLABLE
-    . docente:
+    . docente: VARCHAR(32) ; NOT NULLABLE
     . orario:
-    . link sito web: VARCHAR ; NOT NULLABLE
-
-
+    . link_sito_web: VARCHAR ; NOT NULLABLE
 
 - Insegnante
+    . nome: VARCHAR(64) ; NOT NULLABLE
+    . cognome: VARCHAR(64) ; NOT NULLABLE
+    . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
+    . telefono: VARCHAR(32) ; NULLABLE
+    . link_scheda_personale: VARCHAR ; NOT NULLABLE
 
 - Appello
 
 - Studente
+    . nome: VARCHAR(64) ; NOT NULLABLE
+    . cognome: VARCHAR(64) ; NOT NULLABLE
+    . data di nascita: DATE ; NOT NULLABLE
+    .luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    . indirizzo: VARCHAR ; NOT NULLABLE
+    . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
+    . telefono: VARCHAR(32) ; NULLABLE
 
 - Esito
