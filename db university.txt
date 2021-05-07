@@ -41,17 +41,22 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . cognome: VARCHAR(64) ; NOT NULLABLE
     . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . telefono: VARCHAR(32) ; NULLABLE
+    . orario_ricevimento:
     . link_scheda_personale: VARCHAR ; NOT NULLABLE
 
 - Appello
+    . periodo: TINYINT(1) ; NOT NULLABLE
+    . numero: TINYINT(2) ; NOT NULLABLE
+    . orario:
 
 - Studente
     . nome: VARCHAR(64) ; NOT NULLABLE
     . cognome: VARCHAR(64) ; NOT NULLABLE
     . data di nascita: DATE ; NOT NULLABLE
-    .luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    . luogo_nascita: VARCHAR(64) ; NOT NULLABLE
     . indirizzo: VARCHAR ; NOT NULLABLE
     . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . telefono: VARCHAR(32) ; NULLABLE
 
 - Esito
+    .
