@@ -26,6 +26,7 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . tipologia(triennale/magistrale): VARCHAR(32) ; NULLABLE
     . anno_accademico: YEAR ; NOT NULLABLE
 
+
 - Corso
     . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . periodo: TINYINT(1) ; NOT NULLABLE
@@ -33,7 +34,8 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . lingua: VARCHAR(5) ; DEFAULT('it-IT')
     . crediti: TINYINT(2) ; NOT NULLABLE
     . docente: VARCHAR(32) ; NOT NULLABLE
-    . orario:
+    . aula: VARCHAR(16) ; NOT NULLABLE
+    . orario_lezione: TIME ; NOT NULLABLE
     . link_sito_web: VARCHAR ; NOT NULLABLE
 
 - Insegnante
@@ -41,22 +43,35 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . cognome: VARCHAR(64) ; NOT NULLABLE
     . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . telefono: VARCHAR(32) ; NULLABLE
-    . orario_ricevimento:
+    . data di nascita: DATE ; NOT NULLABLE
+    . luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    . cf: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    . insegnamento: VARCHAR(32) ; NOT NULLABLE
+    . data_ricevimento: DATE ; NOT NULLABLE
+    . orario_ricevimento: TIME ; NOT NULLABLE
     . link_scheda_personale: VARCHAR ; NOT NULLABLE
 
 - Appello
     . periodo: TINYINT(1) ; NOT NULLABLE
     . numero: TINYINT(2) ; NOT NULLABLE
-    . orario:
+    . nome_materia: VARCHAR(128) ; NOT NULLABLE
+    . data: DATE ; NOT NULLABLE
+    . orario: TIME ; NOT NULLABLE
 
 - Studente
     . nome: VARCHAR(64) ; NOT NULLABLE
     . cognome: VARCHAR(64) ; NOT NULLABLE
-    . data di nascita: DATE ; NOT NULLABLE
-    . luogo_nascita: VARCHAR(64) ; NOT NULLABLE
-    . indirizzo: VARCHAR ; NOT NULLABLE
+    . genere: VARCHAR(16) ; NOT NULLABLE
+    . id_utente: VARCHAR(16) ; NOT NULLABLE
+    . password: VARCHAR(64) ; NOT NULLABLE
     . email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
     . telefono: VARCHAR(32) ; NULLABLE
+    . data di nascita: DATE ; NOT NULLABLE
+    . luogo_nascita: VARCHAR(64) ; NOT NULLABLE
+    . cf: VARCHAR(64) ; NOT NULLABLE ; UNIQUE
+    . indirizzo: VARCHAR ; NOT NULLABLE
+    . esami_superati: VARCHAR ; NOT NULLABLE
+
 
 - Esito
-    .
+    . voto: TINYINT ; NOT NULLABLE
