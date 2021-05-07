@@ -19,9 +19,12 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
 	. email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
 	. telefono: VARCHAR(32) ; NULLABLE
 	. sito web: VARCHAR ; NULLABLE
-	. personale: TEXT ; NOT NULLABLE
+
 
 - Corso di Laurea
+    . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
+    . tipologia(triennale/magistrale): VARCHAR(32) ; NULLABLE
+    . anno accademico: YEAR ; NOT NULLABLE
 
 - Corso
 
