@@ -18,7 +18,7 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
 	. indirizzo: VARCHAR ; NOT NULLABLE
 	. email: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
 	. telefono: VARCHAR(32) ; NULLABLE
-	. sito web: VARCHAR ; NULLABLE
+	. link sito web: VARCHAR ; NULLABLE
 
 
 - Corso di Laurea
@@ -27,6 +27,16 @@ NOTE: come detto in classe, in caso di ambiguita', cercare di immaginare una pos
     . anno accademico: YEAR ; NOT NULLABLE
 
 - Corso
+    . nome: VARCHAR(128) ; NOT NULLABLE ; UNIQUE
+    . periodo: TINYINT(1) ; NOT NULLABLE
+    . codice: VARCHAR(16) ; NOT NULLABLE ; UNIQUE
+    . lingua:
+    . crediti:
+    . docente:
+    . orario:
+    . link sito web:
+
+
 
 - Insegnante
 
